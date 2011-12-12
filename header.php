@@ -54,11 +54,9 @@
   $modernizr_locale = get_bloginfo('template_directory').'/js/modernizr.js';
   wp_enqueue_script( 'modernizr', $modernizr_locale, '', '1.6', '');
   // Specified here but loaded in the footer (last param = true)
-  //Jquery and Google Maps
+  //Jquery
   $jquery_locale = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
-  $gmap_locale = 'http://maps.googleapis.com/maps/api/js?sensor=false';
   wp_enqueue_script( 'jquery', $jquery_locale, '', '', '');
-  wp_enqueue_script( 'gmap', $gmap_locale, '', '', '');
 ?>
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=2" type="text/css" media="all" />
@@ -111,6 +109,19 @@
         <?php endif; // end check for featured image or standard header ?>
       </a>
       <?php endif; // end check for removed header image ?>
+
+      <?php
+        // Has the text been hidden?
+        if ( 'blank' == get_header_textcolor() ) :
+      ?>
+        <div class="only-search<?php if ( ! empty( $header_image ) ) : ?> with-image<?php endif; ?>">
+        <?php get_search_form(); ?>
+        </div>
+      <?php
+        else :
+      ?>
+        <?php get_search_form(); ?>
+      <?php endif; ?>
 
       <nav id="access" role="navigation">
         <h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
