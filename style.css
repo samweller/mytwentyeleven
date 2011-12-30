@@ -439,7 +439,33 @@ table {
     border-spacing: 0;
 }
 
+/* The epic clearfix for clearing container of floats - new and improved courtesy of http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
 
+.clearfix:after {
+  clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+  zoom: 1;
+}
+
+/* For clearing floats with an element */
+.clearboth {
+  border: none;
+  clear: both;
+  display: block;
+  float: none;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
 
 
 /* =Structure
@@ -451,6 +477,7 @@ body {
 #page {
   margin: 2em auto;
   max-width: 1000px;
+  background: #fff;
 }
 .branding hgroup {
   margin: 0 7.6%;
@@ -698,9 +725,6 @@ body, input, textarea {
 }
 body {
   background: #e2e2e2;
-}
-#page {
-  background: #fff;
 }
 
 /* Headings */
