@@ -1006,11 +1006,7 @@ a:hover {
   padding: 10px 10px;
   width: 168px;
 }
-#access li:hover > a,
-#access ul ul :hover > a,
-#access a:focus {
-  background: #efefef;
-}
+
 #access li:hover > a,
 #access a:focus {
   background: #f9f9f9; /* Show a solid color for older browsers */
