@@ -78,6 +78,24 @@
 </head>
 
 <body <?php body_class(); ?>>
+  
+  
+  <?php if (is_iphone($version)) {  ?>
+  
+  Maximum Choice!
+  
+  Either give iphone users their own theme (mobile theme switch), or have responsive theme with PHP browser detection to query if shit should show
+  
+  Mobile Theme Switch
+  Choose switch to Iphone theme just for iphone
+  
+  PHP Browser Detection
+  Allows mobile or browser queries to disable stuff thats not iphone friendly (disable the carousel etc)
+  
+  
+  <?php } ?>
+  
+  
 <div id="page" class="hfeed">
   <header class="branding" role="banner">
       <hgroup>
