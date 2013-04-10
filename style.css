@@ -724,13 +724,14 @@ body {
 ----------------------------------------------- */
 
 body, input, textarea {
-  color: #373737;
-  font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #3b3b3b;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.625;
+  line-height: 1.5;
 }
-body {
-  background: #e2e2e2;
+
+.ie body {
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Headings */
@@ -876,12 +877,11 @@ input#searchsubmit {
 /* Links */
 a {
   color: #1982d1;
-  text-decoration: none;
 }
 a:focus,
 a:active,
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Assistive text */
@@ -937,8 +937,8 @@ a:hover {
   margin: 0 270px 3.65625em 0;
 }
 .branding img {
-  height: auto;
-  margin-bottom: -7px;
+/*  height: auto;
+*/  margin-bottom: -7px;
   width: 100%;
 }
 
@@ -962,7 +962,6 @@ a:hover {
   width: 100%;
 }
 #access ul {
-  font-size: 13px;
   list-style: none;
   margin: 0 0 0 -0.8125em;
   padding-left: 0;
@@ -1330,35 +1329,6 @@ img#wpstats {
 #content .gallery-columns-4 .gallery-item img {
   width: 100%;
   height: auto;
-}
-
-/* Image borders */
-img[class*="align"],
-img[class*="wp-image-"],
-#content .gallery .gallery-icon img {/* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
-  border: 1px solid #ddd;
-  padding: 6px;
-}
-.wp-caption img {
-  border-color: #eee;
-}
-a:focus img[class*="align"],
-a:hover img[class*="align"],
-a:active img[class*="align"],
-a:focus img[class*="wp-image-"],
-a:hover img[class*="wp-image-"],
-a:active img[class*="wp-image-"],
-#content .gallery .gallery-icon a:focus img,
-#content .gallery .gallery-icon a:hover img,
-#content .gallery .gallery-icon a:active img {/* Add some useful style to those fancy borders for linked images ... */
-  background: #eee;
-  border-color: #bbb;
-}
-.wp-caption a:focus img,
-.wp-caption a:active img,
-.wp-caption a:hover img {/* ... including captioned images! */
-  background: #fff;
-  border-color: #ddd;
 }
 
 /* Password Protected Posts */
